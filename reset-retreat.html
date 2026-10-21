@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Reset Retreat · Friends of Medicine</title>
+<link rel="icon" type="image/png" href="/assets/fom-logo-nav.png">
+<link rel="apple-touch-icon" href="/assets/fom-logo-nav.png">
+<link rel="shortcut icon" href="/assets/fom-logo-nav.png">
+<meta name="description" content="The annual Reset Retreat. A single weekend each year for the Inner Circle and select high-performance guests. By invitation.">
+<!-- OpenGraph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Friends of Medicine">
+<meta property="og:url" content="https://friendsofmed.com/reset-retreat">
+<meta property="og:title" content="The Reset Retreat — Friends of Medicine">
+<meta property="og:description" content="The annual Inner Circle gathering. A single weekend each year, by invitation.">
+<meta property="og:image" content="https://friendsofmed.com/assets/photos/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Reset Retreat — Friends of Medicine">
+<meta name="twitter:description" content="The annual Inner Circle gathering. A single weekend each year, by invitation.">
+<meta name="twitter:image" content="https://friendsofmed.com/assets/photos/og-card.jpg">
+<!-- Canonical -->
+<link rel="canonical" href="https://friendsofmed.com/reset-retreat">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --fom-teal: #1D9DAA;
+    --fom-teal-bright: #2BB8C6;
+    --fom-teal-deep: #0F6E78;
+    --fom-black: #0A0A0A;
+    --fom-black-soft: #141414;
+    --fom-charcoal: #1C1C1C;
+    --fom-graphite: #2A2A2A;
+    --fom-stone: #3A3A3A;
+    --fom-ash: #6B6B6B;
+    --fom-smoke: #9C9C9C;
+    --fom-bone: #E8E4DC;
+    --fom-cream: #F5F1E8;
+    --fom-white: #FFFFFF;
+    --font-display: 'Oswald', 'Impact', sans-serif;
+    --font-body: 'Inter', -apple-system, sans-serif;
+    --font-editorial: 'Instrument Serif', Georgia, serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--fom-black);
+    color: var(--fom-bone);
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: overlay;
+  }
+
+  /* ============ NAV ============ */
+  .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10, 10, 10, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(232, 228, 220, 0.06); }
+  .nav-inner { max-width: 1400px; margin: 0 auto; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo img { width: 44px; height: 44px; object-fit: contain; }
+  .nav-logo-text { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--fom-bone); letter-spacing: 0.05em; line-height: 1; }
+  .nav-logo-sub { font-family: var(--font-editorial); font-style: italic; font-size: 12px; color: var(--fom-teal); letter-spacing: 0.05em; margin-top: 2px; }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-link { font-family: var(--font-display); color: var(--fom-bone); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; padding: 8px 0; position: relative; opacity: 0.85; transition: opacity 0.2s ease; }
+  .nav-link:hover, .nav-link.active { opacity: 1; }
+  .nav-link.active::after, .nav-link:hover::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: var(--fom-teal); }
+  .nav-cta { font-family: var(--font-display); background: var(--fom-teal); color: var(--fom-white); padding: 12px 24px; border-radius: 100px; text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; border: 1px solid var(--fom-teal-bright); transition: background 0.2s ease, transform 0.2s ease; }
+  .nav-cta:hover { background: var(--fom-teal-bright); transform: translateY(-1px); }
+  .nav-hamburger { display: none; background: transparent; border: none; cursor: pointer; padding: 8px; flex-direction: column; gap: 5px; }
+  .nav-hamburger span { width: 22px; height: 2px; background: var(--fom-bone); transition: all 0.3s ease; }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ============ MOBILE MENU ============ */
+  .mobile-menu { display: none; position: fixed; top: 80px; left: 0; right: 0; bottom: 0; background: var(--fom-black); flex-direction: column; padding: 40px; z-index: 99; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu-link { font-family: var(--font-display); color: var(--fom-bone); text-decoration: none; font-size: 24px; font-weight: 500; letter-spacing: 0.1em; padding: 16px 0; border-bottom: 1px solid rgba(232, 228, 220, 0.08); }
+  .mobile-menu-link.active { color: var(--fom-teal); }
+  .mobile-menu-cta { font-family: var(--font-display); background: var(--fom-teal); color: var(--fom-white); padding: 16px; border-radius: 4px; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; text-align: center; margin-top: 32px; }
+
+  /* ============ SKIP LINK ============ */
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 8px;
+    z-index: 9999;
+    background: var(--fom-teal);
+    color: #fff;
+    padding: 12px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(63, 216, 226, 0.6);
+    transition: top 0.2s ease;
+  }
+  .skip-link:focus {
+    top: 8px;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+
+  /* ============ HERO ============ */
+  .retreat-hero { position: relative; min-height: 92vh; display: flex; align-items: center; justify-content: center; padding: 120px 40px 80px; text-align: center; overflow: hidden; }
+  .retreat-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 100%, rgba(29, 157, 170, 0.12), transparent 60%),
+      linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .retreat-hero-content { position: relative; z-index: 2; max-width: 900px; }
+  .retreat-hero-eyebrow {
+    font-family: var(--font-display);
+    color: var(--fom-teal);
+    font-size: 13px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 32px;
+    opacity: 0.9;
+  }
+  .retreat-hero-title {
+    font-family: var(--font-editorial);
+    font-size: clamp(56px, 9vw, 120px);
+    line-height: 1;
+    color: var(--fom-bone);
+    margin-bottom: 32px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+  .retreat-hero-title em {
+    font-style: italic;
+    color: var(--fom-teal);
+  }
+  .retreat-hero-sub {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: clamp(18px, 2.2vw, 24px);
+    color: var(--fom-smoke);
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto 48px;
+  }
+  .retreat-hero-marker {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--fom-ash);
+    border-top: 1px solid rgba(29, 157, 170, 0.3);
+    border-bottom: 1px solid rgba(29, 157, 170, 0.3);
+    padding: 10px 24px;
+  }
+
+  /* ============ SECTIONS ============ */
+  .retreat-section { position: relative; z-index: 2; padding: 100px 40px; max-width: 1100px; margin: 0 auto; }
+  .retreat-section.narrow { max-width: 760px; }
+  .retreat-section-eyebrow {
+    font-family: var(--font-display);
+    color: var(--fom-teal);
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .retreat-section-title {
+    font-family: var(--font-editorial);
+    font-size: clamp(40px, 5.5vw, 64px);
+    line-height: 1.05;
+    color: var(--fom-bone);
+    margin-bottom: 40px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .retreat-section-title em {
+    font-style: italic;
+    color: var(--fom-teal);
+  }
+  .retreat-section-body {
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--fom-bone);
+    max-width: 640px;
+    margin-bottom: 24px;
+  }
+  .retreat-section-body em {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    color: var(--fom-smoke);
+  }
+
+  /* ============ TEXTURE LIST ============ */
+  .texture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 48px;
+    margin-top: 24px;
+  }
+  .texture-item {
+    border-top: 1px solid rgba(29, 157, 170, 0.2);
+    padding-top: 24px;
+  }
+  .texture-item-label {
+    font-family: var(--font-display);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--fom-teal);
+    margin-bottom: 16px;
+  }
+  .texture-item-body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--fom-bone);
+  }
+
+  /* ============ DETAILS TABLE ============ */
+  .details-list {
+    list-style: none;
+    border-top: 1px solid rgba(232, 228, 220, 0.1);
+  }
+  .details-list li {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 32px;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(232, 228, 220, 0.1);
+    align-items: baseline;
+  }
+  .details-label {
+    font-family: var(--font-display);
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--fom-teal);
+  }
+  .details-value {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--fom-bone);
+  }
+  .details-value em {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    color: var(--fom-smoke);
+  }
+  .details-value .revealed-tag {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--fom-teal);
+    background: rgba(29, 157, 170, 0.08);
+    border: 1px solid rgba(29, 157, 170, 0.3);
+    padding: 4px 10px;
+    border-radius: 100px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  /* ============ QUIET CTA ============ */
+  .retreat-cta { padding: 140px 40px 160px; text-align: center; max-width: 760px; margin: 0 auto; position: relative; z-index: 2; }
+  .retreat-cta-eyebrow {
+    font-family: var(--font-display);
+    color: var(--fom-teal);
+    font-size: 12px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    font-weight: 500;
+  }
+  .retreat-cta-title {
+    font-family: var(--font-editorial);
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1.1;
+    color: var(--fom-bone);
+    margin-bottom: 32px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .retreat-cta-title em {
+    font-style: italic;
+    color: var(--fom-teal);
+  }
+  .retreat-cta-body {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--fom-smoke);
+    margin-bottom: 48px;
+  }
+  .retreat-cta-btn {
+    display: inline-block;
+    font-family: var(--font-display);
+    background: var(--fom-teal);
+    color: var(--fom-white);
+    padding: 18px 40px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 1px solid var(--fom-teal-bright);
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .retreat-cta-btn:hover { background: var(--fom-teal-bright); transform: translateY(-1px); }
+  .retreat-cta-fineprint {
+    font-family: var(--font-display);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--fom-ash);
+    margin-top: 32px;
+  }
+
+  /* ============ FOOTER ============ */
+  .footer { background: var(--fom-black-soft); padding: 80px 40px 40px; position: relative; z-index: 2; }
+  .footer-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 64px; padding-bottom: 64px; border-bottom: 1px solid rgba(232, 228, 220, 0.08); }
+  .footer-brand-name { font-family: var(--font-display); font-size: 24px; font-weight: 600; color: var(--fom-bone); letter-spacing: 0.05em; margin-bottom: 4px; }
+  .footer-brand-sub { font-family: var(--font-editorial); font-style: italic; font-size: 14px; color: var(--fom-teal); margin-bottom: 20px; }
+  .footer-brand-text { font-size: 14px; color: var(--fom-smoke); line-height: 1.6; max-width: 360px; }
+  .footer-col-title { font-family: var(--font-display); font-size: 12px; font-weight: 600; color: var(--fom-bone); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 20px; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 12px; }
+  .footer-links a { color: var(--fom-bone); text-decoration: none; font-size: 14px; transition: color 0.2s ease; }
+  .footer-links a:hover { color: var(--fom-teal); }
+  .footer-links .placeholder { color: var(--fom-bone); font-size: 14px; opacity: 0.7; cursor: default; }
+  .footer-bottom { max-width: 1400px; margin: 40px auto 0; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 12px; color: var(--fom-ash); }
+
+  /* ============ MOBILE ============ */
+  @media (max-width: 968px) {
+    .nav-inner { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+    .retreat-section { padding: 80px 24px; }
+    .details-list li { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; }
+    .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+</style>
+<!-- Scroll-reveal motion system (subtle, reduced-motion aware, fails safe) -->
+<script>document.documentElement.classList.add('has-reveal');</script>
+<style>
+  .has-reveal section:not([class*="hero"]) h2,
+  .has-reveal section:not([class*="hero"]) h3,
+  .has-reveal section:not([class*="hero"]) [class*="-card"],
+  .has-reveal section:not([class*="hero"]) [class*="-tile"],
+  .has-reveal section:not([class*="hero"]) [class*="-item"] {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+  }
+  .has-reveal .fom-revealed { opacity: 1 !important; transform: none !important; }
+  @media (prefers-reduced-motion: reduce) {
+    .has-reveal section:not([class*="hero"]) h2,
+    .has-reveal section:not([class*="hero"]) h3,
+    .has-reveal section:not([class*="hero"]) [class*="-card"],
+    .has-reveal section:not([class*="hero"]) [class*="-tile"],
+    .has-reveal section:not([class*="hero"]) [class*="-item"] {
+      opacity: 1 !important; transform: none !important; transition: none !important;
+    }
+  }
+</style>
+<script>
+(function(){
+  var root = document.documentElement;
+  function showAll(){ root.classList.remove('has-reveal'); }
+  try {
+    if (!('IntersectionObserver' in window)) { showAll(); return; }
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    function init(){
+      try {
+        var sel = '.has-reveal section:not([class*="hero"]) h2, .has-reveal section:not([class*="hero"]) h3, .has-reveal section:not([class*="hero"]) [class*="-card"], .has-reveal section:not([class*="hero"]) [class*="-tile"], .has-reveal section:not([class*="hero"]) [class*="-item"]';
+        var nodes = Array.prototype.slice.call(document.querySelectorAll(sel));
+        nodes = nodes.filter(function(el){ return !el.closest('[class*="carousel"]') && !el.closest('[class*="portal-door"]'); });
+        if (!nodes.length) { showAll(); return; }
+        var obs = new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if (e.isIntersecting){
+              var el = e.target;
+              var sibs = el.parentElement ? Array.prototype.filter.call(el.parentElement.children, function(c){ return nodes.indexOf(c) !== -1; }) : [];
+              var idx = sibs.indexOf(el);
+              if (idx > 0) el.style.transitionDelay = Math.min(idx,5)*70 + 'ms';
+              el.classList.add('fom-revealed');
+              obs.unobserve(el);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+        nodes.forEach(function(el){ obs.observe(el); });
+      } catch(err){ showAll(); }
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+  } catch(err){ showAll(); }
+})();
+</script>
+<!-- Typography micro-polish: balanced headings, pretty body wrap, brand selection -->
+<style>
+  /* Custom selection — brand teal with cream text */
+  ::selection { background: #1D9DAA; color: #E8E4DC; text-shadow: none; }
+  ::-moz-selection { background: #1D9DAA; color: #E8E4DC; text-shadow: none; }
+
+  /* Balance headlines — distribute words evenly across lines (modern browsers; older safely ignore) */
+  h1, h2, h3, h4,
+  [class*="-title"],
+  [class*="-heading"] {
+    text-wrap: balance;
+  }
+
+  /* Pretty body wrap — prevents short orphan last lines on body text */
+  p,
+  [class*="-subtitle"],
+  [class*="-lead"],
+  [class*="-description"],
+  [class*="-body"] {
+    text-wrap: pretty;
+  }
+</style>
+<!-- Sticky-nav scroll transformation: condenses + deepens on scroll -->
+<style>
+  .nav .nav-logo img { transition: width 0.3s ease; }
+  .nav.nav-scrolled {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    background: rgba(10, 10, 10, 0.92) !important;
+    backdrop-filter: blur(24px) !important;
+    -webkit-backdrop-filter: blur(24px) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  }
+  .nav.nav-scrolled .nav-logo img { width: 36px !important; }
+  @media (max-width: 640px) {
+    .nav.nav-scrolled { padding-top: 10px !important; padding-bottom: 10px !important; }
+    .nav.nav-scrolled .nav-logo img { width: 32px !important; }
+  }
+</style>
+<script>
+(function(){
+  function initNavScroll(){
+    var nav = document.querySelector('.nav');
+    if (!nav) return;
+    var ticking = false;
+    function update(){ nav.classList.toggle('nav-scrolled', window.scrollY > 40); ticking = false; }
+    window.addEventListener('scroll', function(){
+      if (!ticking){ window.requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    update();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initNavScroll);
+  else initNavScroll();
+})();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/fom-logo-nav.png" alt="FOM">
+      <div>
+        <div class="nav-logo-text">Friends of Medicine</div>
+        <div class="nav-logo-sub">The Network</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="events.html" class="nav-link">Events</a>
+      <a href="index.html#cities" class="nav-link">Cities</a>
+      <a href="inner-circle.html" class="nav-link">Inner Circle</a>
+      <a href="portal.html" class="nav-link">The Portal</a>
+      <a href="index.html#podcast" class="nav-link">Podcast</a>
+      <a href="sponsor.html" class="nav-link">Sponsor</a>
+      <a href="https://api.leadconnectorhq.com/widget/form/6clswncucoMastw6mUCs" target="_blank" rel="noopener" class="nav-cta">Request Inner Circle</a>
+    </div>
+    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-menu-link" onclick="closeMobileMenu()">Home</a>
+  <a href="events.html" class="mobile-menu-link" onclick="closeMobileMenu()">Events</a>
+  <a href="index.html#cities" class="mobile-menu-link" onclick="closeMobileMenu()">Cities</a>
+  <a href="inner-circle.html" class="mobile-menu-link" onclick="closeMobileMenu()">Inner Circle</a>
+  <a href="portal.html" class="mobile-menu-link" onclick="closeMobileMenu()">The Portal</a>
+  <a href="index.html#podcast" class="mobile-menu-link" onclick="closeMobileMenu()">Podcast</a>
+  <a href="sponsor.html" class="mobile-menu-link" onclick="closeMobileMenu()">Sponsor</a>
+  <a href="city-partner.html" class="mobile-menu-link" onclick="closeMobileMenu()">City Partner</a>
+  <a href="about.html" class="mobile-menu-link" onclick="closeMobileMenu()">About</a>
+  <a href="https://api.leadconnectorhq.com/widget/form/6clswncucoMastw6mUCs" target="_blank" class="mobile-menu-cta" onclick="closeMobileMenu()">Inner Circle →</a>
+</div>
+
+
+<a id="main" tabindex="-1" aria-hidden="true"></a>
+
+<!-- HERO -->
+<section class="retreat-hero">
+  <div class="retreat-hero-content">
+    <div class="retreat-hero-eyebrow">Annual · 2027</div>
+    <h1 class="retreat-hero-title">The Reset <em>Retreat</em></h1>
+    <p class="retreat-hero-sub">A single weekend each year. Set apart for the Inner Circle and select high-performance guests.</p>
+    <div class="retreat-hero-marker">By Invitation · Inner Circle Access</div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="retreat-section narrow">
+  <div class="retreat-section-eyebrow">The Philosophy</div>
+  <h2 class="retreat-section-title">Why we <em>reset</em>.</h2>
+  <p class="retreat-section-body">The pace of medicine, capital, and innovation doesn't slow. The schedules don't either. Once a year, Friends of Medicine gathers a small group - the Inner Circle and a handful of high-performance guests - for a weekend designed to interrupt the rhythm.</p>
+  <p class="retreat-section-body">To reset. To return to the work with a different center. To be in a room with people who understand the speed you usually live at - and what it costs.</p>
+</section>
+
+<!-- TEXTURE -->
+<section class="retreat-section">
+  <div class="retreat-section-eyebrow">The Weekend, Sketched</div>
+  <h2 class="retreat-section-title">A different <em>rhythm</em>.</h2>
+  <p class="retreat-section-body">The agenda is curated, never published. The shape is the same each year, the substance designed for the room that gathers.</p>
+  
+  <div class="texture-grid">
+    <div class="texture-item">
+      <div class="texture-item-label">Wellness</div>
+      <p class="texture-item-body">Movement, recovery, and stillness designed by practitioners who understand what high performers actually need - not what looks good on a brochure.</p>
+    </div>
+    <div class="texture-item">
+      <div class="texture-item-label">Strategy</div>
+      <p class="texture-item-body">Curated conversations on what comes next - in practice, in business, in the work you came here to do. Not panels. Not pitches. Conversations.</p>
+    </div>
+    <div class="texture-item">
+      <div class="texture-item-label">Connection</div>
+      <p class="texture-item-body">The kinds of conversations that don't happen at 8AM rounds or Q4 board meetings. The ones that happen when phones are down and schedules are off.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHO'S IN THE ROOM -->
+<section class="retreat-section narrow">
+  <div class="retreat-section-eyebrow">The Room</div>
+  <h2 class="retreat-section-title">Who's <em>in</em>.</h2>
+  <p class="retreat-section-body">The Inner Circle, from every chapter. A small number of select high-performance guests. No press. No media. No livestreams.</p>
+  <p class="retreat-section-body">Phones down. Schedules off. <em>Real attendance.</em></p>
+</section>
+
+<!-- THE SETTING -->
+<section class="retreat-section narrow">
+  <div class="retreat-section-eyebrow">The Setting</div>
+  <h2 class="retreat-section-title">Where and <em>when</em>.</h2>
+  <p class="retreat-section-body">The specifics are confirmed in conversation with each attendee, never published. The shape:</p>
+  
+  <ul class="details-list">
+    <li>
+      <div class="details-label">Year</div>
+      <div class="details-value">2027</div>
+    </li>
+    <li>
+      <div class="details-label">Season</div>
+      <div class="details-value"><em>Revealed to confirmed members</em> <span class="revealed-tag">Inner Circle</span></div>
+    </li>
+    <li>
+      <div class="details-label">Location</div>
+      <div class="details-value"><em>Revealed to confirmed members</em> <span class="revealed-tag">Inner Circle</span></div>
+    </li>
+    <li>
+      <div class="details-label">Length</div>
+      <div class="details-value">An intentional weekend - long enough to settle, short enough to return to.</div>
+    </li>
+    <li>
+      <div class="details-label">Group Size</div>
+      <div class="details-value">Intentionally small. Curated for proximity.</div>
+    </li>
+    <li>
+      <div class="details-label">What's Included</div>
+      <div class="details-value"><em>Confirmed in conversation with each attendee</em> <span class="revealed-tag">Inner Circle</span></div>
+    </li>
+  </ul>
+</section>
+
+<!-- QUIET CTA -->
+<section class="retreat-cta">
+  <div class="retreat-cta-eyebrow">A Seat Begins With Inner Circle</div>
+  <h2 class="retreat-cta-title">The room is built from <em>the network</em>.</h2>
+  <p class="retreat-cta-body">The annual Reset Retreat is part of Inner Circle access. There is no separate registration. The Inner Circle decides who's in the room - and the conversation starts long before the weekend does.</p>
+  <a href="inner-circle.html#inquire" class="retreat-cta-btn">Request the Inner Circle →</a>
+  <div class="retreat-cta-fineprint">By Invitation · Curated · Selective</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">Friends of Medicine</div>
+      <div class="footer-brand-sub">The Network</div>
+      <p class="footer-brand-text">Proximity creates opportunity. A curated network convening those advancing human health - across medicine, capital, and innovation.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">The Network</div>
+      <ul class="footer-links">
+        <li><a href="events.html">Events</a></li>
+        <li><a href="index.html#cities">Cities</a></li>
+        <li><a href="portal.html">The Portal</a></li>
+        <li><a href="inner-circle.html">Inner Circle</a></li>
+        <li><a href="index.html#podcast">Podcast</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Partner</div>
+      <ul class="footer-links">
+        <li><a href="sponsor.html">Sponsors</a></li>
+        <li><a href="city-partner.html">City Partners</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">About</div>
+      <ul class="footer-links">
+        <li><a href="about.html">Our Story</a></li>
+        <li><span class="placeholder">Team</span></li>
+        <li><span class="placeholder">Contact</span></li>
+        <li><a href="merch.html">Merch</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Friends of Medicine · All Rights Reserved</div>
+    <div>Miami · Fort Lauderdale (2026) · West Palm Beach (2026) · Dallas (2026) · New York (2026) · Atlanta (2026)</div>
+  </div>
+</footer>
+
+<script>
+  // ============ MOBILE HAMBURGER ============
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  function closeMobileMenu() {
+    if (!hamburgerBtn || !mobileMenu) return;
+    hamburgerBtn.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburgerBtn.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+  }
+</script>
+
+<!-- BACK TO TOP BUTTON -->
+<style>
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(29, 157, 170, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(29, 157, 170, 0.4);
+  color: #E8E4DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease, border-color 0.2s ease;
+  z-index: 100;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  outline: none;
+  padding: 0;
+  line-height: 1;
+}
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background: rgba(29, 157, 170, 0.3);
+  border-color: rgba(63, 216, 226, 0.8);
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  .back-to-top { bottom: 24px; right: 20px; width: 44px; height: 44px; font-size: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top { transition: opacity 0.2s ease; }
+  .back-to-top:hover { transform: none; }
+}
+</style>
+<button class="back-to-top" id="backToTop" aria-label="Return to top of page" title="Return to top">↑</button>
+<script>
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  function update() { btn.classList.toggle('visible', window.scrollY > 600); }
+  window.addEventListener('scroll', update, { passive: true });
+  btn.addEventListener('click', function() {
+    var supportsSmooth = 'scrollBehavior' in document.documentElement.style;
+    if (supportsSmooth) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  });
+  update();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About · Friends of Medicine</title>
+<link rel="icon" type="image/png" href="/assets/fom-logo-nav.png">
+<link rel="apple-touch-icon" href="/assets/fom-logo-nav.png">
+<link rel="shortcut icon" href="/assets/fom-logo-nav.png">
+<meta name="description" content="The story behind Friends of Medicine. Founded in 2019 by Dr. André Coombs.">
+<!-- OpenGraph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Friends of Medicine">
+<meta property="og:url" content="https://friendsofmed.com/about">
+<meta property="og:title" content="About Friends of Medicine">
+<meta property="og:description" content="The story behind FOM — and the room we're building.">
+<meta property="og:image" content="https://friendsofmed.com/assets/founder/andre-portrait.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Friends of Medicine">
+<meta name="twitter:description" content="The story behind FOM — and the room we're building.">
+<meta name="twitter:image" content="https://friendsofmed.com/assets/founder/andre-portrait.jpg">
+<!-- Canonical -->
+<link rel="canonical" href="https://friendsofmed.com/about">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --fom-teal: #1D9DAA;
+    --fom-teal-bright: #2BB8C6;
+    --fom-teal-deep: #0F6E78;
+    --fom-black: #0A0A0A;
+    --fom-black-soft: #141414;
+    --fom-charcoal: #1C1C1C;
+    --fom-graphite: #2A2A2A;
+    --fom-stone: #3A3A3A;
+    --fom-ash: #6B6B6B;
+    --fom-smoke: #9C9C9C;
+    --fom-bone: #E8E4DC;
+    --fom-cream: #F5F1E8;
+    --fom-white: #FFFFFF;
+    --font-display: 'Oswald', 'Impact', sans-serif;
+    --font-body: 'Inter', -apple-system, sans-serif;
+    --font-editorial: 'Instrument Serif', Georgia, serif;
+  }
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  
+  body {
+    background: var(--fom-black);
+    color: var(--fom-bone);
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 1000;
+  }
+  
+  img { max-width: 100%; display: block; }
+  
+  /* NAV */
+  .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 48px; background: rgba(10, 10, 10, 0.7); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(42, 42, 42, 0.5); }
+  .nav-inner { max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+  .nav-logo img { width: 44px; height: auto; }
+  .nav-logo-text { font-family: var(--font-display); font-size: 14px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fom-white); }
+  .nav-logo-sub { font-family: var(--font-display); font-size: 10px; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; color: var(--fom-teal); margin-top: 2px; }
+  .nav-links { display: flex; gap: 36px; align-items: center; }
+  .nav-link { font-family: var(--font-display); font-size: 12px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--fom-bone); text-decoration: none; transition: color 0.2s ease; }
+  .nav-link:hover { color: var(--fom-teal); }
+  .nav-link.active { color: var(--fom-teal); }
+  .nav-cta { font-family: var(--font-display); font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; background: var(--fom-teal); color: var(--fom-black); padding: 12px 24px; text-decoration: none; transition: all 0.2s ease; }
+  .nav-cta:hover { background: var(--fom-white); }
+  
+  /* ============ HERO ============ */
+  .hero {
+    min-height: 88vh;
+    padding: 160px 48px 120px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; }
+  .hero-bg img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center;
+    filter: brightness(0.4) saturate(0.8) contrast(1.1); 
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      linear-gradient(180deg, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0.3) 35%, rgba(10,10,10,0.5) 70%, var(--fom-black) 100%);
+  }
+  .hero-content { 
+    position: relative; 
+    z-index: 2; 
+    max-width: 1080px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--fom-teal);
+    margin-bottom: 32px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--fom-teal);
+  }
+  .hero-title {
+    font-family: var(--font-editorial);
+    font-size: clamp(48px, 8vw, 132px);
+    font-weight: 400;
+    line-height: 0.96;
+    letter-spacing: -0.02em;
+    color: var(--fom-white);
+    max-width: 1000px;
+  }
+  .hero-title em { font-style: italic; color: var(--fom-teal); }
+  
+  /* ============ ORIGIN STORY ============ */
+  .origin {
+    padding: 140px 48px;
+    border-top: 1px solid var(--fom-graphite);
+  }
+  .origin-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .origin-visual {
+    position: sticky;
+    top: 120px;
+    border: 1px solid var(--fom-graphite);
+    overflow: hidden;
+  }
+  .origin-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .origin-prose .label {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--fom-teal);
+    margin-bottom: 28px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .origin-prose .label::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--fom-teal);
+  }
+  .origin-prose h2 {
+    font-family: var(--font-editorial);
+    font-size: clamp(36px, 4.5vw, 56px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: var(--fom-white);
+    margin-bottom: 40px;
+  }
+  .origin-prose h2 em { font-style: italic; color: var(--fom-teal); }
+  .origin-prose p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--fom-bone);
+    margin-bottom: 22px;
+  }
+  .origin-prose p strong {
+    color: var(--fom-white);
+    font-weight: 600;
+  }
+  
+  /* Pull quote */
+  .pull-quote {
+    margin: 48px 0;
+    padding: 40px 36px;
+    border-left: 3px solid var(--fom-teal);
+    background: rgba(29, 157, 170, 0.05);
+    position: relative;
+  }
+  .pull-quote::before {
+    content: '"';
+    position: absolute;
+    left: 20px;
+    top: -8px;
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: 80px;
+    line-height: 1;
+    color: var(--fom-teal);
+    opacity: 0.3;
+  }
+  .pull-quote-text {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.45;
+    color: var(--fom-white);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    padding-left: 36px;
+  }
+  .pull-quote-cite {
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--fom-teal);
+    padding-left: 36px;
+  }
+  .pull-quote-cite a {
+    color: var(--fom-teal);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+  .pull-quote-cite a:hover {
+    border-bottom-color: var(--fom-teal);
+  }
+  
+  /* ============ THESIS ============ */
+  .thesis {
+    padding: 140px 48px;
+    border-top: 1px solid var(--fom-graphite);
+    background: var(--fom-black-soft);
+    position: relative;
+    overflow: hidden;
+  }
+  .thesis::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(180deg, var(--fom-teal), transparent);
+  }
+  .thesis-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .thesis-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--fom-teal);
+    margin-bottom: 40px;
+  }
+  .thesis-label::before, .thesis-label::after {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--fom-teal);
+  }
+  .thesis-statement {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: var(--fom-white);
+  }
+  .thesis-statement em {
+    color: var(--fom-teal);
+    font-style: italic;
+  }
+  .thesis-statement strong {
+    color: var(--fom-white);
+    font-weight: 400;
+    font-style: normal;
+    font-family: var(--font-editorial);
+  }
+  
+  /* ============ FOUNDER BIO ============ */
+  .founder {
+    padding: 140px 48px;
+    border-top: 1px solid var(--fom-graphite);
+  }
+  .founder-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .founder-visual {
+    border: 1px solid var(--fom-graphite);
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+  }
+  .founder-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .founder-content .label {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--fom-teal);
+    margin-bottom: 28px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .founder-content .label::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--fom-teal);
+  }
+  .founder-name {
+    font-family: var(--font-editorial);
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.015em;
+    color: var(--fom-white);
+    margin-bottom: 12px;
+  }
+  .founder-name em { font-style: italic; color: var(--fom-teal); }
+  .founder-credential {
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--fom-bone);
+    margin-bottom: 36px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--fom-graphite);
+  }
+  .founder-bio p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--fom-bone);
+    margin-bottom: 20px;
+  }
+  .founder-bio p:last-child { margin-bottom: 0; }
+  .founder-press {
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid var(--fom-graphite);
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--fom-smoke);
+  }
+  .founder-press a {
+    color: var(--fom-teal);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+  .founder-press a:hover {
+    border-bottom-color: var(--fom-teal);
+  }
+  
+  /* ============ TIMELINE ============ */
+  .timeline {
+    padding: 140px 48px;
+    border-top: 1px solid var(--fom-graphite);
+    background: var(--fom-black-soft);
+  }
+  .timeline-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .timeline-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  .timeline-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--fom-teal);
+    margin-bottom: 28px;
+  }
+  .timeline-label::before, .timeline-label::after {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--fom-teal);
+  }
+  .timeline-heading {
+    font-family: var(--font-editorial);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: var(--fom-white);
+  }
+  .timeline-heading em { font-style: italic; color: var(--fom-teal); }
+  
+  .timeline-track {
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+    padding-left: 60px;
+  }
+  .timeline-track::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: linear-gradient(180deg, var(--fom-teal) 0%, var(--fom-teal) 60%, var(--fom-graphite) 100%);
+  }
+  
+  .timeline-item {
+    position: relative;
+    padding-bottom: 48px;
+  }
+  .timeline-item:last-child { padding-bottom: 0; }
+  
+  .timeline-marker {
+    position: absolute;
+    left: -54px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--fom-teal);
+    background: var(--fom-black-soft);
+    border-radius: 50%;
+  }
+  .timeline-item.future .timeline-marker {
+    border-color: var(--fom-graphite);
+    background: var(--fom-black-soft);
+  }
+  .timeline-item.future .timeline-marker::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border-radius: 50%;
+    background: var(--fom-graphite);
+  }
+  
+  .timeline-year {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--fom-teal);
+    margin-bottom: 8px;
+  }
+  .timeline-item.future .timeline-year {
+    color: var(--fom-smoke);
+  }
+  .timeline-event {
+    font-family: var(--font-editorial);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--fom-white);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .timeline-event em { font-style: italic; color: var(--fom-teal); }
+  .timeline-detail {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--fom-smoke);
+  }
+  
+  /* ============ FINAL CTA ============ */
+  .final-cta {
+    padding: 140px 48px;
+    border-top: 1px solid var(--fom-graphite);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  .final-cta-eyebrow {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--fom-teal);
+    margin-bottom: 32px;
+  }
+  .final-cta-title {
+    font-family: var(--font-editorial);
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--fom-white);
+    margin-bottom: 32px;
+  }
+  .final-cta-title em { font-style: italic; color: var(--fom-teal); }
+  .final-cta-sub {
+    font-size: 17px;
+    color: var(--fom-bone);
+    line-height: 1.55;
+    margin-bottom: 48px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .final-cta-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 18px 36px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+  }
+  .btn-primary { background: var(--fom-teal); color: var(--fom-black); }
+  .btn-primary:hover { background: var(--fom-white); transform: translateY(-2px); }
+  .btn-primary::after { content: '→'; transition: transform 0.3s ease; }
+  .btn-primary:hover::after { transform: translateX(6px); }
+  .btn-secondary { background: transparent; color: var(--fom-white); border: 1px solid var(--fom-bone); }
+  .btn-secondary:hover { background: var(--fom-bone); color: var(--fom-black); }
+  
+  /* FOOTER */
+  .footer {
+    background: var(--fom-black);
+    padding: 80px 48px 32px;
+    border-top: 1px solid var(--fom-graphite);
+  }
+  .footer-grid { max-width: 1440px; margin: 0 auto 48px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 64px; }
+  .footer-brand-name { font-family: var(--font-display); font-size: 16px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fom-white); margin-bottom: 8px; }
+  .footer-brand-sub { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--fom-teal); margin-bottom: 24px; }
+  .footer-brand-text { font-family: var(--font-editorial); font-style: italic; font-size: 15px; line-height: 1.6; color: var(--fom-smoke); max-width: 360px; }
+  .footer-col-title { font-family: var(--font-display); font-size: 10px; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--fom-teal); margin-bottom: 20px; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 12px; }
+  .footer-links a { color: var(--fom-bone); text-decoration: none; font-size: 14px; transition: color 0.2s ease; }
+  .footer-links a:hover { color: var(--fom-teal); }
+  .footer-links .placeholder { color: var(--fom-bone); font-size: 14px; opacity: 0.7; cursor: default; }
+  .footer-bottom { max-width: 1440px; margin: 0 auto; padding-top: 32px; border-top: 1px solid var(--fom-graphite); display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; font-size: 12px; color: var(--fom-ash); }
+  
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .nav, .hero, .origin, .thesis, .founder, .timeline, .final-cta, .footer { padding-left: 24px; padding-right: 24px; }
+    .origin-inner { grid-template-columns: 1fr; gap: 48px; }
+    .origin-visual { position: static; max-width: 480px; }
+    .founder-inner { grid-template-columns: 1fr; gap: 48px; }
+    .founder-visual { max-width: 360px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  }
+  
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .nav { padding: 16px 20px; }
+    .hero { min-height: auto; padding: 120px 20px 80px; }
+    .origin, .thesis, .founder, .timeline, .final-cta, .footer { padding: 80px 20px; }
+    .pull-quote { padding: 28px 24px; }
+    .pull-quote-text { font-size: 18px; padding-left: 28px; }
+    .pull-quote-cite { padding-left: 28px; }
+    .timeline-track { padding-left: 40px; }
+    .timeline-marker { left: -38px; }
+    .final-cta-actions { flex-direction: column; width: 100%; }
+    .btn { justify-content: center; }
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ========================================
+     MOBILE HAMBURGER + MENU
+     ======================================== */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    z-index: 200;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background: var(--fom-bone);
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background: var(--fom-black);
+    flex-direction: column;
+    padding: 100px 32px 48px;
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateY(-12px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+  }
+  .mobile-menu.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+  .mobile-menu-link {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: var(--fom-bone);
+    text-decoration: none;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--fom-graphite);
+    transition: color 0.2s ease;
+  }
+  .mobile-menu-link:last-of-type { border-bottom: none; }
+  .mobile-menu-link:hover, .mobile-menu-link:active { color: var(--fom-teal); }
+  .mobile-menu-link.active { color: var(--fom-teal); }
+  .mobile-menu-cta {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: var(--fom-teal);
+    color: var(--fom-black);
+    padding: 18px 32px;
+    text-decoration: none;
+    margin-top: 36px;
+    width: 100%;
+    text-align: center;
+    transition: background 0.2s ease;
+  }
+  .mobile-menu-cta:hover { background: var(--fom-white); }
+
+  @media (max-width: 640px) {
+    .nav-hamburger { display: flex; }
+    .mobile-menu { display: flex; }
+  }
+
+
+  /* SKIP TO MAIN CONTENT (a11y) */
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 8px;
+    z-index: 9999;
+    background: var(--fom-teal, #1D9DAA);
+    color: #fff;
+    padding: 12px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(63, 216, 226, 0.6);
+    transition: top 0.2s ease;
+  }
+  .skip-link:focus {
+    top: 8px;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+
+</style>
+<!-- Scroll-reveal motion system (subtle, reduced-motion aware, fails safe) -->
+<script>document.documentElement.classList.add('has-reveal');</script>
+<style>
+  .has-reveal section:not([class*="hero"]) h2,
+  .has-reveal section:not([class*="hero"]) h3,
+  .has-reveal section:not([class*="hero"]) [class*="-card"],
+  .has-reveal section:not([class*="hero"]) [class*="-tile"],
+  .has-reveal section:not([class*="hero"]) [class*="-item"] {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+  }
+  .has-reveal .fom-revealed { opacity: 1 !important; transform: none !important; }
+  @media (prefers-reduced-motion: reduce) {
+    .has-reveal section:not([class*="hero"]) h2,
+    .has-reveal section:not([class*="hero"]) h3,
+    .has-reveal section:not([class*="hero"]) [class*="-card"],
+    .has-reveal section:not([class*="hero"]) [class*="-tile"],
+    .has-reveal section:not([class*="hero"]) [class*="-item"] {
+      opacity: 1 !important; transform: none !important; transition: none !important;
+    }
+  }
+</style>
+<script>
+(function(){
+  var root = document.documentElement;
+  function showAll(){ root.classList.remove('has-reveal'); }
+  try {
+    if (!('IntersectionObserver' in window)) { showAll(); return; }
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    function init(){
+      try {
+        var sel = '.has-reveal section:not([class*="hero"]) h2, .has-reveal section:not([class*="hero"]) h3, .has-reveal section:not([class*="hero"]) [class*="-card"], .has-reveal section:not([class*="hero"]) [class*="-tile"], .has-reveal section:not([class*="hero"]) [class*="-item"]';
+        var nodes = Array.prototype.slice.call(document.querySelectorAll(sel));
+        nodes = nodes.filter(function(el){ return !el.closest('[class*="carousel"]') && !el.closest('[class*="portal-door"]'); });
+        if (!nodes.length) { showAll(); return; }
+        var obs = new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if (e.isIntersecting){
+              var el = e.target;
+              var sibs = el.parentElement ? Array.prototype.filter.call(el.parentElement.children, function(c){ return nodes.indexOf(c) !== -1; }) : [];
+              var idx = sibs.indexOf(el);
+              if (idx > 0) el.style.transitionDelay = Math.min(idx,5)*70 + 'ms';
+              el.classList.add('fom-revealed');
+              obs.unobserve(el);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+        nodes.forEach(function(el){ obs.observe(el); });
+      } catch(err){ showAll(); }
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+  } catch(err){ showAll(); }
+})();
+</script>
+<!-- Typography micro-polish: balanced headings, pretty body wrap, brand selection -->
+<style>
+  /* Custom selection — brand teal with cream text */
+  ::selection { background: #1D9DAA; color: #E8E4DC; text-shadow: none; }
+  ::-moz-selection { background: #1D9DAA; color: #E8E4DC; text-shadow: none; }
+
+  /* Balance headlines — distribute words evenly across lines (modern browsers; older safely ignore) */
+  h1, h2, h3, h4,
+  [class*="-title"],
+  [class*="-heading"] {
+    text-wrap: balance;
+  }
+
+  /* Pretty body wrap — prevents short orphan last lines on body text */
+  p,
+  [class*="-subtitle"],
+  [class*="-lead"],
+  [class*="-description"],
+  [class*="-body"] {
+    text-wrap: pretty;
+  }
+</style>
+<!-- Sticky-nav scroll transformation: condenses + deepens on scroll -->
+<style>
+  .nav .nav-logo img { transition: width 0.3s ease; }
+  .nav.nav-scrolled {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    background: rgba(10, 10, 10, 0.92) !important;
+    backdrop-filter: blur(24px) !important;
+    -webkit-backdrop-filter: blur(24px) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  }
+  .nav.nav-scrolled .nav-logo img { width: 36px !important; }
+  @media (max-width: 640px) {
+    .nav.nav-scrolled { padding-top: 10px !important; padding-bottom: 10px !important; }
+    .nav.nav-scrolled .nav-logo img { width: 32px !important; }
+  }
+</style>
+<script>
+(function(){
+  function initNavScroll(){
+    var nav = document.querySelector('.nav');
+    if (!nav) return;
+    var ticking = false;
+    function update(){ nav.classList.toggle('nav-scrolled', window.scrollY > 40); ticking = false; }
+    window.addEventListener('scroll', function(){
+      if (!ticking){ window.requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    update();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initNavScroll);
+  else initNavScroll();
+})();
+</script>
+</head>
+<body>
+
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/fom-logo-nav.png" alt="FOM">
+      <div>
+        <div class="nav-logo-text">Friends of Medicine</div>
+        <div class="nav-logo-sub">The Network</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="events.html" class="nav-link">Events</a>
+      <a href="index.html#cities" class="nav-link">Cities</a>
+      <a href="inner-circle.html" class="nav-link">Inner Circle</a>
+      <a href="portal.html" class="nav-link">The Portal</a>
+      <a href="index.html#podcast" class="nav-link">Podcast</a>
+      <a href="sponsor.html" class="nav-link">Sponsor</a>
+      <a href="https://api.leadconnectorhq.com/widget/form/6clswncucoMastw6mUCs" target="_blank" rel="noopener" class="nav-cta">Request Inner Circle</a>
+    </div>
+    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-menu-link" onclick="closeMobileMenu()">Home</a>
+  <a href="events.html" class="mobile-menu-link" onclick="closeMobileMenu()">Events</a>
+  <a href="index.html#cities" class="mobile-menu-link" onclick="closeMobileMenu()">Cities</a>
+  <a href="inner-circle.html" class="mobile-menu-link" onclick="closeMobileMenu()">Inner Circle</a>
+  <a href="portal.html" class="mobile-menu-link" onclick="closeMobileMenu()">The Portal</a>
+  <a href="index.html#podcast" class="mobile-menu-link" onclick="closeMobileMenu()">Podcast</a>
+  <a href="sponsor.html" class="mobile-menu-link" onclick="closeMobileMenu()">Sponsor</a>
+  <a href="city-partner.html" class="mobile-menu-link" onclick="closeMobileMenu()">City Partner</a>
+  <a href="about.html" class="mobile-menu-link active" onclick="closeMobileMenu()">About</a>
+  <a href="https://api.leadconnectorhq.com/widget/form/6clswncucoMastw6mUCs" target="_blank" class="mobile-menu-cta" onclick="closeMobileMenu()">Inner Circle →</a>
+</div>
+
+
+<a id="main" tabindex="-1" aria-hidden="true"></a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="assets/founder/andre-or-wide.jpg" alt="Dr. André Coombs in the operating room">
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">About Friends of Medicine</div>
+    <h1 class="hero-title">It started with a graduation <em>celebration</em> in Miami</h1>
+  </div>
+</section>
+
+<!-- ORIGIN STORY -->
+<section class="origin">
+  <div class="origin-inner">
+    <div class="origin-visual">
+      <img src="assets/founder/andre-speaking.jpg" alt="Dr. André Coombs speaking at FOM event">
+    </div>
+    <div class="origin-prose">
+      <div class="label">The Origin</div>
+      <h2>Friends of Medicine began with <em>one table</em>, in 2019</h2>
+      
+      <p>Before the network. Before the cities. Before the rooms full of physicians, founders, and investors - there was a graduation celebration in Miami, hosted by a board-certified trauma surgeon for the people who had stood beside him through training.</p>
+      
+      <p>Dr. André Coombs hadn't planned to start anything. He had simply gathered the colleagues, mentors, and friends who had shaped him over years of medical training. Around that table, something quieter than a dinner conversation came into focus: <strong>the people who had carried him through were the same people who would shape what came next.</strong></p>
+      
+      <p>The struggles that defined those early years - the financial strain, the isolation that healthcare professionals carry quietly - were real. Dr. Coombs has spoken openly about them since:</p>
+      
+      <div class="pull-quote">
+        <p class="pull-quote-text">I couldn't pay my rent. I was alone, a board-certified surgeon driving DoorDash just to afford to eat - and I didn't know what to do.</p>
+        <div class="pull-quote-cite">- Dr. André Coombs, in <a href="https://disruptmagazine.com/dr-andre-coombs-this-surgeon-and-entrepreneur-is-looking-to-end-burnout-by-building-meaningful-connections/" target="_blank" rel="noopener">Disrupt Magazine</a></div>
+      </div>
+      
+      <p>Those experiences sharpened the conviction behind FOM: that the relationships physicians need are rarely built inside the institutions where they train. They're built in the rooms in between.</p>
+      
+      <p>That single dinner became a series. The series became a community. The community became Friends of Medicine - a curated network now anchored in Miami and expanding to five new cities in 2026.</p>
+      
+      <p>What hasn't changed is the original premise: bring the right people into the right rooms, and meaningful things happen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THESIS -->
+<section class="thesis">
+  <div class="thesis-inner">
+    <div class="thesis-label">The Thesis</div>
+    <p class="thesis-statement">The people who shape healthcare don't always meet each other. <em>The physician-founder.</em> <em>The investor with capital.</em> <em>The wellness operator.</em> They all exist in their own silos. <strong>Friends of Medicine is the room they share.</strong></p>
+  </div>
+</section>
+
+<!-- FOUNDER BIO -->
+<section class="founder">
+  <div class="founder-inner">
+    <div class="founder-visual">
+      <img src="assets/founder/andre-portrait.jpg" alt="Dr. André Coombs">
+    </div>
+    <div class="founder-content">
+      <div class="label">The Founder</div>
+      <h2 class="founder-name">Dr. André <em>Coombs</em></h2>
+      <div class="founder-credential">Board-Certified Trauma & Acute Care Surgeon · Founder, FOM</div>
+      <div class="founder-bio">
+        <p>Dr. Coombs is an active board-certified trauma and acute care surgeon based in South Florida. The clinical work continues - the operating room, the night calls, the patients who arrive when no one else can help. That's not a past life. It's the work that anchors everything else.</p>
+        <p>He founded Friends of Medicine in 2019 after recognizing what most networks miss: that the relationships that sustain healthcare professionals are rarely built inside the institutions where they trained. They're built in the rooms in between.</p>
+        <p>Today he leads FOM's expansion across the U.S. - building the network he wishes had existed during his training years, for the next generation of physicians, founders, and operators advancing human health.</p>
+      </div>
+      <div class="founder-press">
+        Featured in <a href="https://disruptmagazine.com/dr-andre-coombs-this-surgeon-and-entrepreneur-is-looking-to-end-burnout-by-building-meaningful-connections/" target="_blank" rel="noopener">Disrupt Magazine →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline">
+  <div class="timeline-inner">
+    <div class="timeline-header">
+      <div class="timeline-label">The Arc</div>
+      <h2 class="timeline-heading">From one room <em>to many</em></h2>
+    </div>
+    
+    <div class="timeline-track">
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-year">2019</div>
+        <div class="timeline-event">FOM is founded in <em>Miami</em></div>
+        <div class="timeline-detail">A graduation celebration becomes a recurring dinner. The first community takes shape.</div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-year">2022</div>
+        <div class="timeline-event">National attention</div>
+        <div class="timeline-detail">FOM is featured in Disrupt Magazine - recognition that the model is working at scale.</div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-year">2025 – 2026</div>
+        <div class="timeline-event">Series formalized</div>
+        <div class="timeline-detail">Tech Tuesday, Wellness Wednesday, Unwind Thursday, and Founders Friday become the four signature monthly activations. Reset Retreat launches as the annual flagship.</div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-year">Today</div>
+        <div class="timeline-event">3,000+ <em>past attendees</em></div>
+        <div class="timeline-detail">Miami is the active flagship. Inner Circle applications are reviewed weekly by the FOM committee.</div>
+      </div>
+      
+      <div class="timeline-item future">
+        <div class="timeline-marker"></div>
+        <div class="timeline-year">2026</div>
+        <div class="timeline-event">Five new cities launch</div>
+        <div class="timeline-detail">Fort Lauderdale, West Palm Beach, Dallas, New York, and Atlanta come online - each with a local City Partner and chapter team.</div>
+      </div>
+      
+      <div class="timeline-item future">
+        <div class="timeline-marker"></div>
+        <div class="timeline-year">Beyond</div>
+        <div class="timeline-event">National footprint</div>
+        <div class="timeline-detail">A dozen markets across the U.S. - built carefully, one city at a time.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <div class="final-cta-eyebrow">The Invitation</div>
+    <h2 class="final-cta-title">If the story <em>resonates</em></h2>
+    <p class="final-cta-sub">There's only one way to know if FOM is your room - start the conversation.</p>
+    <div class="final-cta-actions">
+      <a href="inner-circle.html#inquire" class="btn btn-primary">Start the Conversation</a>
+      <a href="events.html" class="btn btn-secondary">See Upcoming Events</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">Friends of Medicine</div>
+      <div class="footer-brand-sub">The Network</div>
+      <p class="footer-brand-text">Proximity creates opportunity. A curated network convening those advancing human health - across medicine, capital, and innovation.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">The Network</div>
+      <ul class="footer-links">
+        <li><a href="events.html">Events</a></li>
+        <li><a href="index.html#cities">Cities</a></li>
+        <li><a href="portal.html">The Portal</a></li>
+        <li><a href="inner-circle.html">Inner Circle</a></li>
+        <li><a href="index.html#podcast">Podcast</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Partner</div>
+      <ul class="footer-links">
+        <li><a href="sponsor.html">Sponsors</a></li>
+        <li><a href="city-partner.html">City Partners</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">About</div>
+      <ul class="footer-links">
+        <li><a href="about.html">Our Story</a></li>
+        <li><span class="placeholder">Team</span></li>
+        <li><span class="placeholder">Contact</span></li>
+        <li><a href="merch.html">Merch</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Friends of Medicine · All Rights Reserved</div>
+    <div>Miami · Fort Lauderdale (2026) · West Palm Beach (2026) · Dallas (2026) · New York (2026) · Atlanta (2026)</div>
+  </div>
+</footer>
+
+<script>
+
+  // ============ MOBILE HAMBURGER ============
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  function closeMobileMenu() {
+    if (!hamburgerBtn || !mobileMenu) return;
+    hamburgerBtn.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburgerBtn.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+  }
+
+</script>
+
+<!-- BACK TO TOP BUTTON -->
+<style>
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(29, 157, 170, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(29, 157, 170, 0.4);
+  color: #E8E4DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease, border-color 0.2s ease;
+  z-index: 100;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  outline: none;
+  padding: 0;
+  line-height: 1;
+}
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background: rgba(29, 157, 170, 0.3);
+  border-color: rgba(63, 216, 226, 0.8);
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  .back-to-top { bottom: 24px; right: 20px; width: 44px; height: 44px; font-size: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top { transition: opacity 0.2s ease; }
+  .back-to-top:hover { transform: none; }
+}
+</style>
+<button class="back-to-top" id="backToTop" aria-label="Return to top of page" title="Return to top">↑</button>
+<script>
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  function update() { btn.classList.toggle('visible', window.scrollY > 600); }
+  window.addEventListener('scroll', update, { passive: true });
+  btn.addEventListener('click', function() {
+    var supportsSmooth = 'scrollBehavior' in document.documentElement.style;
+    if (supportsSmooth) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  });
+  update();
+})();
+</script>
+</body>
+</html>

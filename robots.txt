@@ -1,0 +1,11 @@
+# Friends of Medicine — robots.txt
+# Allow all well-behaved crawlers
+
+User-agent: *
+Allow: /
+
+# Exclude system / non-public pages from indexing
+Disallow: /404
+
+# Sitemap location
+Sitemap: https://friendsofmed.com/sitemap.xml

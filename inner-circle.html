@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inner Circle · Friends of Medicine</title>
+<link rel="icon" type="image/png" href="/assets/fom-logo-nav.png">
+<link rel="apple-touch-icon" href="/assets/fom-logo-nav.png">
+<link rel="shortcut icon" href="/assets/fom-logo-nav.png">
+<meta name="description" content="Inner Circle is the gated tier of Friends of Medicine. By invitation, by review, by conversation.">
+<!-- OpenGraph / Social Sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Friends of Medicine">
+<meta property="og:url" content="https://friendsofmed.com/inner-circle">
+<meta property="og:title" content="Inner Circle — Friends of Medicine">
+<meta property="og:description" content="The gated tier of Friends of Medicine. By invitation, by review, by conversation.">
+<meta property="og:image" content="https://friendsofmed.com/assets/photos/rooftop-collage.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Inner Circle — Friends of Medicine">
+<meta name="twitter:description" content="The gated tier of Friends of Medicine. By invitation, by review, by conversation.">
+<meta name="twitter:image" content="https://friendsofmed.com/assets/photos/rooftop-collage.jpg">
+<!-- Canonical -->
+<link rel="canonical" href="https://friendsofmed.com/inner-circle">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --fom-teal: #1D9DAA;
+    --fom-teal-bright: #2BB8C6;
+    --fom-teal-deep: #0F6E78;
+    --fom-black: #0A0A0A;
+    --fom-black-soft: #141414;
+    --fom-charcoal: #1C1C1C;
+    --fom-graphite: #2A2A2A;
+    --fom-stone: #3A3A3A;
+    --fom-ash: #6B6B6B;
+    --fom-smoke: #9C9C9C;
+    --fom-bone: #E8E4DC;
+    --fom-cream: #F5F1E8;
+    --fom-white: #FFFFFF;
+    --font-display: 'Oswald', 'Impact', sans-serif;
+    --font-body: 'Inter', -apple-system, sans-serif;
+    --font-editorial: 'Instrument Serif', Georgia, serif;
+  }
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  
+  body {
+    background: var(--fom-black);
+    color: var(--fom-bone);
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 1000;
+  }
+  
+  img { max-width: 100%; display: block; }
+  a { text-decoration: none; }
+  
+  /* NAV */
+  .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 20px 48px; background: rgba(10, 10, 10, 0.7); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(42, 42, 42, 0.5); }
+  .nav-inner { max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 12px; color: inherit; }
+  .nav-logo img { width: 44px; height: auto; }
+  .nav-logo-text { font-family: var(--font-display); font-size: 14px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fom-white); }
+  .nav-logo-sub { font-family: var(--font-display); font-size: 10px; font-weight: 400; letter-spacing: 0.3em; text-transform: uppercase; color: var(--fom-teal); margin-top: 2px; }
+  .nav-links { display: flex; gap: 36px; align-items: center; }
+  .nav-link { font-family: var(--font-display); font-size: 12px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--fom-bone); transition: color 0.2s ease; }
+  .nav-link:hover { color: var(--fom-teal); }
+  .nav-link.active { color: var(--fom-teal); }
+  .nav-cta { font-family: var(--font-display); font-size: 12px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; background: var(--fom-teal); color: var(--fom-black); padding: 12px 24px; transition: all 0.2s ease; }
+  .nav-cta:hover { background: var(--fom-white); }
+  
+  /* ============ HERO ============ */
+  .hero {
+    min-height: 92vh;
+    padding: 160px 48px 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; }
+  .hero-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.32) saturate(0.85) contrast(1.12); }
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      linear-gradient(180deg, rgba(10,10,10,0.45) 0%, rgba(10,10,10,0.2) 35%, rgba(10,10,10,0.65) 100%),
+      linear-gradient(90deg, rgba(10,10,10,0.6) 0%, transparent 60%);
+  }
+  .hero-content { 
+    position: relative; 
+    z-index: 2; 
+    max-width: 1180px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--fom-teal);
+    margin-bottom: 36px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--fom-teal);
+  }
+  .hero-title {
+    font-family: var(--font-editorial);
+    font-size: clamp(54px, 9vw, 152px);
+    font-weight: 400;
+    line-height: 0.92;
+    letter-spacing: -0.025em;
+    color: var(--fom-white);
+    max-width: 1100px;
+    margin-bottom: 40px;
+  }
+  .hero-title em { font-style: italic; color: var(--fom-teal); }
+  .hero-sub {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: clamp(18px, 1.7vw, 22px);
+    line-height: 1.5;
+    color: var(--fom-bone);
+    max-width: 580px;
+    opacity: 0.92;
+  }
+  .hero-marker {
+    margin-top: 72px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--fom-smoke);
+  }
+  .hero-marker::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--fom-teal);
+    animation: pulse 2.5s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.15); }
+  }
+  
+  /* ============ SNAPSHOT WALL ============ */
+  .snapshot {
+    padding: 140px 48px;
+    border-top: 1px solid var(--fom-graphite);
+    position: relative;
+  }
+  .snapshot-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--fom-teal);
+    margin-bottom: 28px;
+  }
+  .section-label::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--fom-teal);
+  }
+  .section-label.centered {
+    justify-content: center;
+  }
+  .section-label.centered::after {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background: var(--fom-teal);
+  }
+  
+  .snapshot-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 80px;
+  }
+  .snapshot-heading {
+    font-family: var(--font-editorial);
+    font-size: clamp(40px, 5.5vw, 76px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--fom-white);
+  }
+  .snapshot-heading em { font-style: italic; color: var(--fom-teal); }
+  .snapshot-intro {
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--fom-smoke);
+    max-width: 460px;
+    padding-bottom: 12px;
+  }
+  
+  .snapshot-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+  }
+  
+  .tile {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--fom-graphite);
+    cursor: default;
+    transition: border-color 0.4s ease, transform 0.4s ease;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 32px;
+  }
+  .tile:hover { border-color: var(--fom-teal); }
+  .tile-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .tile-bg img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5) saturate(0.7);
+    transition: transform 0.7s ease, filter 0.7s ease;
+  }
+  .tile:hover .tile-bg img {
+    transform: scale(1.05);
+    filter: brightness(0.65) saturate(0.85);
+  }
+  .tile-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 30%, rgba(10,10,10,0.85) 100%);
+  }
+  .tile-content {
+    position: relative;
+    z-index: 2;
+  }
+  .tile-num {
+    font-family: 'SF Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--fom-teal);
+    margin-bottom: 16px;
+  }
+  .tile-title {
+    font-family: var(--font-editorial);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--fom-white);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .tile-title em { font-style: italic; color: var(--fom-teal); }
+  .tile-cap {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--fom-bone);
+    opacity: 0.7;
+  }
+  
+  .tile.span-6 { grid-column: span 6; min-height: 360px; }
+  .tile.span-4 { grid-column: span 4; min-height: 280px; }
+  .tile.span-8 { grid-column: span 8; min-height: 320px; }
+  .tile.span-3 { grid-column: span 3; min-height: 240px; }
+  .tile.span-12 { grid-column: span 12; min-height: 380px; }
+  .tile.tall { min-height: 420px; }
+  
+  .tile.text-only {
+    background: var(--fom-black-soft);
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .tile.text-only::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--fom-teal);
+  }
+  .tile.text-only .tile-title { font-size: 38px; line-height: 1.05; }
+  .tile.text-only .tile-cap { margin-top: 16px; }
+  
+  /* ============ DAY IN THE LIFE ============ */
+  .week {
+    padding: 140px 48px;
+    border-top: 1px solid var(--fom-graphite);
+    background: var(--fom-black-soft);
+  }
+  .week-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+  .week-header {
+    text-align: center;
+    margin-bottom: 96px;
+  }
+  .week-heading {
+    font-family: var(--font-editorial);
+    font-size: clamp(40px, 5.5vw, 72px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--fom-white);
+    margin-bottom: 24px;
+  }
+  .week-heading em { font-style: italic; color: var(--fom-teal); }
+  .week-sub {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: 19px;
+    color: var(--fom-smoke);
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  
+  .week-track {
+    position: relative;
+    padding-left: 48px;
+  }
+  .week-track::before {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 12px;
+    bottom: 12px;
+    width: 1px;
+    background: linear-gradient(180deg, var(--fom-teal) 0%, var(--fom-teal) 80%, var(--fom-graphite) 100%);
+  }
+  
+  .week-day {
+    position: relative;
+    padding-bottom: 60px;
+  }
+  .week-day:last-child { padding-bottom: 0; }
+  
+  .week-day::before {
+    content: '';
+    position: absolute;
+    left: -42px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--fom-teal);
+    background: var(--fom-black-soft);
+    border-radius: 50%;
+  }
+  
+  .week-day-label {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--fom-teal);
+    margin-bottom: 12px;
+  }
+  .week-day-title {
+    font-family: var(--font-editorial);
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--fom-white);
+    margin-bottom: 14px;
+  }
+  .week-day-title em { font-style: italic; color: var(--fom-teal); }
+  .week-day-text {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--fom-bone);
+    max-width: 620px;
+  }
+  
+  .week-coda {
+    margin-top: 60px;
+    padding-top: 48px;
+    border-top: 1px solid var(--fom-graphite);
+    text-align: center;
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: clamp(22px, 2.5vw, 32px);
+    line-height: 1.4;
+    color: var(--fom-white);
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .week-coda em { color: var(--fom-teal); font-style: italic; }
+  
+  /* ============ THE ROOM ============ */
+  .room {
+    padding: 140px 48px;
+    border-top: 1px solid var(--fom-graphite);
+    position: relative;
+    overflow: hidden;
+  }
+  .room-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .room-bg img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: brightness(0.18) saturate(0.5);
+  }
+  .room-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(10,10,10,0.7) 70%, var(--fom-black) 100%);
+  }
+  .room-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1240px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .room-heading {
+    font-family: var(--font-editorial);
+    font-size: clamp(40px, 5.5vw, 76px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--fom-white);
+    margin-bottom: 24px;
+  }
+  .room-heading em { font-style: italic; color: var(--fom-teal); }
+  .room-sub {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: 19px;
+    color: var(--fom-smoke);
+    max-width: 600px;
+    margin: 0 auto 80px;
+    line-height: 1.5;
+  }
+  .room-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--fom-graphite);
+    border: 1px solid var(--fom-graphite);
+  }
+  .room-stat {
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 56px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .room-stat-num {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: clamp(48px, 6vw, 80px);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--fom-teal);
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+  .room-stat-label {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--fom-bone);
+    line-height: 1.4;
+  }
+  
+  /* ============ LOCKED VAULT ============ */
+  .vault {
+    padding: 140px 48px;
+    border-top: 1px solid var(--fom-graphite);
+  }
+  .vault-inner {
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+  .vault-header {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  .vault-heading {
+    font-family: var(--font-editorial);
+    font-size: clamp(40px, 5.5vw, 72px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--fom-white);
+    margin-bottom: 24px;
+  }
+  .vault-heading em { font-style: italic; color: var(--fom-teal); }
+  .vault-sub {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: 19px;
+    color: var(--fom-smoke);
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  
+  .vault-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--fom-graphite);
+    border: 1px solid var(--fom-graphite);
+  }
+  .vault-card {
+    background: var(--fom-black);
+    padding: 48px 36px;
+    position: relative;
+    transition: background 0.3s ease;
+  }
+  .vault-card:hover { background: var(--fom-black-soft); }
+  
+  .vault-card-lock {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--fom-stone);
+    color: var(--fom-ash);
+  }
+  .vault-card-lock svg { width: 14px; height: 14px; fill: currentColor; }
+  
+  .vault-card-num {
+    position: absolute;
+    top: 32px;
+    right: 36px;
+    font-family: 'SF Mono', monospace;
+    font-size: 10px;
+    color: var(--fom-stone);
+    letter-spacing: 0.2em;
+  }
+  
+  .vault-card-title {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.15;
+    text-transform: uppercase;
+    color: var(--fom-bone);
+    letter-spacing: -0.005em;
+    margin-bottom: 14px;
+  }
+  
+  .vault-card-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--fom-smoke);
+  }
+  
+  .vault-coda {
+    margin-top: 48px;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--fom-ash);
+  }
+  .vault-coda em { color: var(--fom-teal); font-style: normal; letter-spacing: 0.3em; }
+  
+  /* ============ FINAL CTA - QUIET ============ */
+  .quiet-cta {
+    padding: 160px 48px;
+    border-top: 1px solid var(--fom-graphite);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .quiet-cta-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .quiet-cta-bg img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: brightness(0.22) saturate(0.6) blur(1px);
+  }
+  .quiet-cta-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(10,10,10,0.4) 0%, rgba(10,10,10,0.85) 70%, var(--fom-black) 100%);
+  }
+  .quiet-cta-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .quiet-cta-eyebrow {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    color: var(--fom-teal);
+    margin-bottom: 40px;
+  }
+  .quiet-cta-title {
+    font-family: var(--font-editorial);
+    font-size: clamp(44px, 7vw, 92px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    color: var(--fom-white);
+    margin-bottom: 36px;
+  }
+  .quiet-cta-title em { font-style: italic; color: var(--fom-teal); }
+  .quiet-cta-sub {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--fom-bone);
+    max-width: 540px;
+    margin: 0 auto 56px;
+  }
+  .quiet-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 22px 44px;
+    background: transparent;
+    color: var(--fom-white);
+    border: 1px solid var(--fom-bone);
+    transition: all 0.3s ease;
+  }
+  .quiet-btn:hover {
+    background: var(--fom-teal);
+    color: var(--fom-black);
+    border-color: var(--fom-teal);
+    transform: translateY(-2px);
+  }
+  .quiet-btn::after { 
+    content: '→'; 
+    transition: transform 0.3s ease; 
+    font-family: var(--font-body);
+  }
+  .quiet-btn:hover::after { transform: translateX(8px); }
+  
+  .quiet-cta-fineprint {
+    margin-top: 40px;
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--fom-ash);
+  }
+  .quiet-cta-alt {
+    margin-top: 24px;
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--fom-stone);
+    letter-spacing: 0.01em;
+  }
+  .quiet-cta-alt a {
+    color: var(--fom-teal-bright);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    transition: color 0.2s ease;
+  }
+  .quiet-cta-alt a:hover {
+    color: var(--fom-white);
+  }
+  
+  /* FOOTER */
+  .footer {
+    background: var(--fom-black);
+    padding: 80px 48px 32px;
+    border-top: 1px solid var(--fom-graphite);
+  }
+  .footer-grid { max-width: 1440px; margin: 0 auto 48px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 64px; }
+  .footer-brand-name { font-family: var(--font-display); font-size: 16px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--fom-white); margin-bottom: 8px; }
+  .footer-brand-sub { font-family: var(--font-display); font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--fom-teal); margin-bottom: 24px; }
+  .footer-brand-text { font-family: var(--font-editorial); font-style: italic; font-size: 15px; line-height: 1.6; color: var(--fom-smoke); max-width: 360px; }
+  .footer-col-title { font-family: var(--font-display); font-size: 10px; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--fom-teal); margin-bottom: 20px; }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 12px; }
+  .footer-links a { color: var(--fom-bone); font-size: 14px; transition: color 0.2s ease; }
+  .footer-links a:hover { color: var(--fom-teal); }
+  .footer-links .placeholder { color: var(--fom-bone); font-size: 14px; opacity: 0.7; cursor: default; }
+  .footer-bottom { max-width: 1440px; margin: 0 auto; padding-top: 32px; border-top: 1px solid var(--fom-graphite); display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; font-size: 12px; color: var(--fom-ash); }
+  
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .nav, .hero, .snapshot, .week, .room, .vault, .quiet-cta, .footer { padding-left: 24px; padding-right: 24px; }
+    .snapshot-header { grid-template-columns: 1fr; gap: 24px; }
+    .snapshot-grid { grid-template-columns: repeat(6, 1fr); }
+    .tile.span-6, .tile.span-8, .tile.span-12, .tile.span-4, .tile.span-3 { grid-column: span 6; }
+    .room-stats { grid-template-columns: repeat(2, 1fr); }
+    .vault-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  }
+  
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .nav { padding: 16px 20px; }
+    .hero { min-height: 80vh; padding: 120px 20px 80px; }
+    .snapshot, .week, .room, .vault, .quiet-cta, .footer { padding: 80px 20px; }
+    .snapshot-grid { grid-template-columns: 1fr; }
+    .tile.span-6, .tile.span-8, .tile.span-12, .tile.span-4, .tile.span-3 { grid-column: span 1; }
+    .tile { min-height: 280px !important; }
+    .week-track { padding-left: 36px; }
+    .week-day::before { left: -30px; }
+    .room-stats { grid-template-columns: 1fr; }
+    .room-stat { padding: 40px 24px; }
+    .vault-grid { grid-template-columns: 1fr; }
+    .vault-card { padding: 36px 28px; }
+    .quiet-btn { width: 100%; justify-content: center; padding: 20px 32px; }
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ========================================
+     MOBILE HAMBURGER + MENU
+     ======================================== */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    z-index: 200;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background: var(--fom-bone);
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background: var(--fom-black);
+    flex-direction: column;
+    padding: 100px 32px 48px;
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateY(-12px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+  }
+  .mobile-menu.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+  .mobile-menu-link {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: var(--fom-bone);
+    text-decoration: none;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--fom-graphite);
+    transition: color 0.2s ease;
+  }
+  .mobile-menu-link:last-of-type { border-bottom: none; }
+  .mobile-menu-link:hover, .mobile-menu-link:active { color: var(--fom-teal); }
+  .mobile-menu-link.active { color: var(--fom-teal); }
+  .mobile-menu-cta {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: var(--fom-teal);
+    color: var(--fom-black);
+    padding: 18px 32px;
+    text-decoration: none;
+    margin-top: 36px;
+    width: 100%;
+    text-align: center;
+    transition: background 0.2s ease;
+  }
+  .mobile-menu-cta:hover { background: var(--fom-white); }
+
+  @media (max-width: 640px) {
+    .nav-hamburger { display: flex; }
+    .mobile-menu { display: flex; }
+  }
+
+
+  /* SKIP TO MAIN CONTENT (a11y) */
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 8px;
+    z-index: 9999;
+    background: var(--fom-teal, #1D9DAA);
+    color: #fff;
+    padding: 12px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(63, 216, 226, 0.6);
+    transition: top 0.2s ease;
+  }
+  .skip-link:focus {
+    top: 8px;
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+
+</style>
+<!-- Scroll-reveal motion system (subtle, reduced-motion aware, fails safe) -->
+<script>document.documentElement.classList.add('has-reveal');</script>
+<style>
+  .has-reveal section:not([class*="hero"]) h2,
+  .has-reveal section:not([class*="hero"]) h3,
+  .has-reveal section:not([class*="hero"]) [class*="-card"],
+  .has-reveal section:not([class*="hero"]) [class*="-tile"],
+  .has-reveal section:not([class*="hero"]) [class*="-item"] {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+  }
+  .has-reveal .fom-revealed { opacity: 1 !important; transform: none !important; }
+  @media (prefers-reduced-motion: reduce) {
+    .has-reveal section:not([class*="hero"]) h2,
+    .has-reveal section:not([class*="hero"]) h3,
+    .has-reveal section:not([class*="hero"]) [class*="-card"],
+    .has-reveal section:not([class*="hero"]) [class*="-tile"],
+    .has-reveal section:not([class*="hero"]) [class*="-item"] {
+      opacity: 1 !important; transform: none !important; transition: none !important;
+    }
+  }
+</style>
+<script>
+(function(){
+  var root = document.documentElement;
+  function showAll(){ root.classList.remove('has-reveal'); }
+  try {
+    if (!('IntersectionObserver' in window)) { showAll(); return; }
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    function init(){
+      try {
+        var sel = '.has-reveal section:not([class*="hero"]) h2, .has-reveal section:not([class*="hero"]) h3, .has-reveal section:not([class*="hero"]) [class*="-card"], .has-reveal section:not([class*="hero"]) [class*="-tile"], .has-reveal section:not([class*="hero"]) [class*="-item"]';
+        var nodes = Array.prototype.slice.call(document.querySelectorAll(sel));
+        nodes = nodes.filter(function(el){ return !el.closest('[class*="carousel"]') && !el.closest('[class*="portal-door"]'); });
+        if (!nodes.length) { showAll(); return; }
+        var obs = new IntersectionObserver(function(entries){
+          entries.forEach(function(e){
+            if (e.isIntersecting){
+              var el = e.target;
+              var sibs = el.parentElement ? Array.prototype.filter.call(el.parentElement.children, function(c){ return nodes.indexOf(c) !== -1; }) : [];
+              var idx = sibs.indexOf(el);
+              if (idx > 0) el.style.transitionDelay = Math.min(idx,5)*70 + 'ms';
+              el.classList.add('fom-revealed');
+              obs.unobserve(el);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+        nodes.forEach(function(el){ obs.observe(el); });
+      } catch(err){ showAll(); }
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+    else init();
+  } catch(err){ showAll(); }
+})();
+</script>
+<!-- Typography micro-polish: balanced headings, pretty body wrap, brand selection -->
+<style>
+  /* Custom selection — brand teal with cream text */
+  ::selection { background: #1D9DAA; color: #E8E4DC; text-shadow: none; }
+  ::-moz-selection { background: #1D9DAA; color: #E8E4DC; text-shadow: none; }
+
+  /* Balance headlines — distribute words evenly across lines (modern browsers; older safely ignore) */
+  h1, h2, h3, h4,
+  [class*="-title"],
+  [class*="-heading"] {
+    text-wrap: balance;
+  }
+
+  /* Pretty body wrap — prevents short orphan last lines on body text */
+  p,
+  [class*="-subtitle"],
+  [class*="-lead"],
+  [class*="-description"],
+  [class*="-body"] {
+    text-wrap: pretty;
+  }
+</style>
+<!-- Sticky-nav scroll transformation: condenses + deepens on scroll -->
+<style>
+  .nav .nav-logo img { transition: width 0.3s ease; }
+  .nav.nav-scrolled {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    background: rgba(10, 10, 10, 0.92) !important;
+    backdrop-filter: blur(24px) !important;
+    -webkit-backdrop-filter: blur(24px) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  }
+  .nav.nav-scrolled .nav-logo img { width: 36px !important; }
+  @media (max-width: 640px) {
+    .nav.nav-scrolled { padding-top: 10px !important; padding-bottom: 10px !important; }
+    .nav.nav-scrolled .nav-logo img { width: 32px !important; }
+  }
+</style>
+<script>
+(function(){
+  function initNavScroll(){
+    var nav = document.querySelector('.nav');
+    if (!nav) return;
+    var ticking = false;
+    function update(){ nav.classList.toggle('nav-scrolled', window.scrollY > 40); ticking = false; }
+    window.addEventListener('scroll', function(){
+      if (!ticking){ window.requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
+    update();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initNavScroll);
+  else initNavScroll();
+})();
+</script>
+</head>
+<body>
+
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/fom-logo-nav.png" alt="FOM">
+      <div>
+        <div class="nav-logo-text">Friends of Medicine</div>
+        <div class="nav-logo-sub">The Network</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="events.html" class="nav-link">Events</a>
+      <a href="index.html#cities" class="nav-link">Cities</a>
+      <a href="inner-circle.html" class="nav-link active">Inner Circle</a>
+      <a href="portal.html" class="nav-link">The Portal</a>
+      <a href="index.html#podcast" class="nav-link">Podcast</a>
+      <a href="sponsor.html" class="nav-link">Sponsor</a>
+      <a href="https://api.leadconnectorhq.com/widget/form/6clswncucoMastw6mUCs" target="_blank" rel="noopener" class="nav-cta">Request Inner Circle</a>
+    </div>
+    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="mobile-menu-link" onclick="closeMobileMenu()">Home</a>
+  <a href="events.html" class="mobile-menu-link" onclick="closeMobileMenu()">Events</a>
+  <a href="index.html#cities" class="mobile-menu-link" onclick="closeMobileMenu()">Cities</a>
+  <a href="inner-circle.html" class="mobile-menu-link active" onclick="closeMobileMenu()">Inner Circle</a>
+  <a href="portal.html" class="mobile-menu-link" onclick="closeMobileMenu()">The Portal</a>
+  <a href="index.html#podcast" class="mobile-menu-link" onclick="closeMobileMenu()">Podcast</a>
+  <a href="sponsor.html" class="mobile-menu-link" onclick="closeMobileMenu()">Sponsor</a>
+  <a href="city-partner.html" class="mobile-menu-link" onclick="closeMobileMenu()">City Partner</a>
+  <a href="about.html" class="mobile-menu-link" onclick="closeMobileMenu()">About</a>
+  <a href="https://api.leadconnectorhq.com/widget/form/6clswncucoMastw6mUCs" target="_blank" class="mobile-menu-cta" onclick="closeMobileMenu()">Inner Circle →</a>
+</div>
+
+
+<a id="main" tabindex="-1" aria-hidden="true"></a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="assets/photos/rooftop-collage.jpg" alt="">
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Friends of Medicine · Inner Circle</div>
+    <h1 class="hero-title">Inner Circle sees what others <em>don't</em>.</h1>
+    <p class="hero-sub">Inner Circle is the gated tier of Friends of Medicine - for those advancing human health across medicine, capital, and innovation. This is a glimpse.</p>
+    <div class="hero-marker">Curated · Selective · By Conversation</div>
+  </div>
+</section>
+
+<!-- SNAPSHOT WALL -->
+<section class="snapshot">
+  <div class="snapshot-inner">
+    <div class="snapshot-header">
+      <div>
+        <div class="section-label">A Glimpse Inside</div>
+        <h2 class="snapshot-heading">What Inner Circle <em>gets to be in.</em></h2>
+      </div>
+      <p class="snapshot-intro">Not a feature list. The texture of Inner Circle - the rooms, the relationships, the proximity that creates opportunity.</p>
+    </div>
+    
+    <div class="snapshot-grid">
+      <div class="tile span-8 tall">
+        <div class="tile-bg"><img src="assets/photos/founder-mic.jpg" alt=""></div>
+        <div class="tile-content">
+          <div class="tile-num">01</div>
+          <div class="tile-title">National event access - <em>any city, any night.</em></div>
+          <div class="tile-cap">Walk-in privileges across the network</div>
+        </div>
+      </div>
+      
+      <div class="tile span-4">
+        <div class="tile-bg"><img src="assets/photos/cocktail-table.jpg" alt=""></div>
+        <div class="tile-content">
+          <div class="tile-num">02</div>
+          <div class="tile-title">A <em>private thread</em></div>
+          <div class="tile-cap">Members-only community</div>
+        </div>
+      </div>
+      
+      <div class="tile span-4 text-only">
+        <div class="tile-content">
+          <div class="tile-num">03</div>
+          <div class="tile-title">Proximity to physicians, founders, capital, <em>and innovators.</em></div>
+          <div class="tile-cap">In one curated room</div>
+        </div>
+      </div>
+      
+      <div class="tile span-4">
+        <div class="tile-bg"><img src="assets/photos/group-home.jpg" alt=""></div>
+        <div class="tile-content">
+          <div class="tile-num">04</div>
+          <div class="tile-title">Curated <em>collisions</em></div>
+          <div class="tile-cap">The right people, on purpose</div>
+        </div>
+      </div>
+      
+      <div class="tile span-4">
+        <div class="tile-bg"><img src="assets/photos/pool-gowns.jpg" alt=""></div>
+        <div class="tile-content">
+          <div class="tile-num">05</div>
+          <div class="tile-title">Annual <em>recognition</em></div>
+          <div class="tile-cap">Members-only black-tie</div>
+        </div>
+      </div>
+      
+      <div class="tile span-6">
+        <div class="tile-bg"><img src="assets/photos/event-reception.jpg" alt=""></div>
+        <div class="tile-content">
+          <div class="tile-num">06</div>
+          <div class="tile-title">Retreats. Summits. <em>Invite-only experiences.</em></div>
+          <div class="tile-cap">First consideration for limited-capacity programs</div>
+        </div>
+      </div>
+      
+      <div class="tile span-6">
+        <div class="tile-bg"><img src="assets/photos/moments-collage.jpg" alt=""></div>
+        <div class="tile-content">
+          <div class="tile-num">07</div>
+          <div class="tile-title">A platform <em>that knows your name.</em></div>
+          <div class="tile-cap">Speaking, podcast, and visibility opportunities</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAY IN THE LIFE -->
+<section class="week">
+  <div class="week-inner">
+    <div class="week-header">
+      <div class="section-label centered">A Week In The Network</div>
+      <h2 class="week-heading">Four nights. <em>One network.</em></h2>
+      <p class="week-sub">Each event brings a different dimension of the room together. This is the cadence the network lives by.</p>
+    </div>
+    
+    <div class="week-track">
+      <div class="week-day">
+        <div class="week-day-label">Tuesday · Tech</div>
+        <h3 class="week-day-title">Tech founders <em>in the room.</em></h3>
+        <p class="week-day-text">Healthcare technology, AI, and the operators building what's next. A monthly evening for the people designing tomorrow's clinical infrastructure.</p>
+      </div>
+      
+      <div class="week-day">
+        <div class="week-day-label">Wednesday · Wellness</div>
+        <h3 class="week-day-title">Wellness, <em>by the water.</em></h3>
+        <p class="week-day-text">Longevity, performance, and the practitioners who treat physicians and executives. Slower pace, deeper conversation.</p>
+      </div>
+      
+      <div class="week-day">
+        <div class="week-day-label">Thursday · Unwind</div>
+        <h3 class="week-day-title">An <em>unhurried</em> night.</h3>
+        <p class="week-day-text">Premium spirits. No pitches. The night the network simply gets to be in the same room - without an agenda.</p>
+      </div>
+      
+      <div class="week-day">
+        <div class="week-day-label">Friday · Founders</div>
+        <h3 class="week-day-title">Founders Friday - <em>invite-only.</em></h3>
+        <p class="week-day-text">The most selective night of the month. Operators, investors, and decision-makers behind closed doors. Access by invitation.</p>
+      </div>
+    </div>
+    
+    <p class="week-coda">And that's just the <em>start of the month.</em></p>
+  </div>
+</section>
+
+<!-- THE ROOM -->
+<section class="room">
+  <div class="room-bg"><img src="assets/photos/rooftop-collage.jpg" alt=""></div>
+  <div class="room-inner">
+    <div class="section-label centered">The Room</div>
+    <h2 class="room-heading">The <em>company</em> you'd keep.</h2>
+    <p class="room-sub">Inner Circle is not a member list. It's a curated room - and the texture of who's in it matters more than the size of it.</p>
+    
+    <div class="room-stats">
+      <div class="room-stat">
+        <div class="room-stat-num">3,000+</div>
+        <div class="room-stat-label">Past Attendees<br>Across The Network</div>
+      </div>
+      <div class="room-stat">
+        <div class="room-stat-num">01<span style="font-size:0.5em;opacity:0.55;"> +5</span></div>
+        <div class="room-stat-label">Cities · Launching<br>Throughout 2026</div>
+      </div>
+      <div class="room-stat">
+        <div class="room-stat-num">04</div>
+        <div class="room-stat-label">Signature Series<br>Every Month</div>
+      </div>
+      <div class="room-stat">
+        <div class="room-stat-num">2019</div>
+        <div class="room-stat-label">The Year<br>It Started</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCKED VAULT -->
+<section class="vault">
+  <div class="vault-inner">
+    <div class="vault-header">
+      <div class="section-label centered">Beyond The Door</div>
+      <h2 class="vault-heading">What Inner Circle <em>unlocks</em> as the network grows.</h2>
+      <p class="vault-sub">Some doors open today. Others open as the room gets stronger. The roadmap belongs to Inner Circle.</p>
+    </div>
+    
+    <div class="vault-grid">
+      <div class="vault-card">
+        <div class="vault-card-num">01 / 09</div>
+        <div class="vault-card-lock"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3z"/></svg></div>
+        <h3 class="vault-card-title">A Private Inner Circle Thread</h3>
+        <p class="vault-card-desc">An Inner Circle-only WhatsApp community with city-specific and national channels. Direct peer access across healthcare, business, technology, and entrepreneurship.</p>
+      </div>
+      
+      <div class="vault-card">
+        <div class="vault-card-num">02 / 09</div>
+        <div class="vault-card-lock"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3z"/></svg></div>
+        <h3 class="vault-card-title">CME Dinners</h3>
+        <p class="vault-card-desc">Curated continuing-education evenings by specialty - clinical innovation, industry shifts, and the conversations that don't happen at conferences.</p>
+      </div>
+      
+      <div class="vault-card">
+        <div class="vault-card-num">03 / 09</div>
+        <div class="vault-card-lock"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3z"/></svg></div>
+        <h3 class="vault-card-title">Annual Recognition Dinner</h3>
+        <p class="vault-card-desc">A black-tie, fully-sponsored evening in the flagship city. Inner Circle members from every chapter, each with a guest. A night to honor the people building the network.</p>
+      </div>
+      
+      <div class="vault-card">
+        <div class="vault-card-num">04 / 09</div>
+        <div class="vault-card-lock"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3z"/></svg></div>
+        <h3 class="vault-card-title">Speaking & Podcast Visibility</h3>
+        <p class="vault-card-desc">Priority consideration for podcast guest appearances and curated speaking opportunities. The platform amplifies the members.</p>
+      </div>
+      
+      <div class="vault-card">
+        <div class="vault-card-num">05 / 09</div>
+        <div class="vault-card-lock"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3z"/></svg></div>
+        <h3 class="vault-card-title">Sponsorship & Partnership Pipeline</h3>
+        <p class="vault-card-desc">Strategic visibility with healthcare leaders across markets. Eligibility to co-host, partner, and present - subject to review and brand alignment.</p>
+      </div>
+      
+      <div class="vault-card">
+        <div class="vault-card-num">06 / 09</div>
+        <div class="vault-card-lock"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3z"/></svg></div>
+        <h3 class="vault-card-title">First-In-Line For Retreats</h3>
+        <p class="vault-card-desc">Early access to The Reset Retreat, summits, and invite-only experiences. First consideration for limited-capacity programs.</p>
+      </div>
+      
+      <div class="vault-card">
+        <div class="vault-card-num">07 / 09</div>
+        <div class="vault-card-lock"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3z"/></svg></div>
+        <h3 class="vault-card-title">A Welcome In Every City</h3>
+        <p class="vault-card-desc">Travel into Miami, Fort Lauderdale, Dallas, New York, or Atlanta? An Inner Circle member meets you there. Proximity, in motion.</p>
+      </div>
+      
+      <div class="vault-card">
+        <div class="vault-card-num">08 / 09</div>
+        <div class="vault-card-lock"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3z"/></svg></div>
+        <h3 class="vault-card-title">Media & Editorial Features</h3>
+        <p class="vault-card-desc">Eligibility to be featured across Friends of Medicine platforms - editorial profiles, member spotlights, and press collaborations as the network grows.</p>
+      </div>
+      
+      <div class="vault-card">
+        <div class="vault-card-num">09 / 09</div>
+        <div class="vault-card-lock"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm0 2a3 3 0 0 1 3 3v3H9V6a3 3 0 0 1 3-3z"/></svg></div>
+        <h3 class="vault-card-title">The Things We Don't Announce</h3>
+        <p class="vault-card-desc">Some doors only open from the inside. The unscheduled introductions. The dinners that never appear on a calendar. Inner Circle is the ticket past the program.</p>
+      </div>
+    </div>
+    
+    <p class="vault-coda">Benefits expand <em>as the network grows</em></p>
+  </div>
+</section>
+
+<!-- QUIET CTA -->
+<section class="quiet-cta" id="inquire">
+  <div class="quiet-cta-bg"><img src="assets/photos/neon-jungle-backdrop.jpg" alt=""></div>
+  <div class="quiet-cta-inner">
+    <div class="quiet-cta-eyebrow">The Quiet Door</div>
+    <h2 class="quiet-cta-title">If FOM <em>resonates</em>.</h2>
+    <p class="quiet-cta-sub">Inner Circle is by invitation. The application is the beginning of a conversation - not a transaction. If something here speaks to you, start one.</p>
+    <a href="https://api.leadconnectorhq.com/widget/form/6clswncucoMastw6mUCs" target="_blank" rel="noopener" class="quiet-btn">Start The Conversation</a>
+    <div class="quiet-cta-fineprint">Curated · Selective · By Conversation</div>
+    <div class="quiet-cta-alt">Or begin as a Member in <a href="portal.html">The Portal</a> &rarr;</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">Friends of Medicine</div>
+      <div class="footer-brand-sub">The Network</div>
+      <p class="footer-brand-text">Proximity creates opportunity. A curated network convening those advancing human health - across medicine, capital, and innovation.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">The Network</div>
+      <ul class="footer-links">
+        <li><a href="events.html">Events</a></li>
+        <li><a href="index.html#cities">Cities</a></li>
+        <li><a href="portal.html">The Portal</a></li>
+        <li><a href="inner-circle.html">Inner Circle</a></li>
+        <li><a href="index.html#podcast">Podcast</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Partner</div>
+      <ul class="footer-links">
+        <li><a href="sponsor.html">Sponsors</a></li>
+        <li><a href="city-partner.html">City Partners</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">About</div>
+      <ul class="footer-links">
+        <li><a href="about.html">Our Story</a></li>
+        <li><span class="placeholder">Team</span></li>
+        <li><span class="placeholder">Contact</span></li>
+        <li><a href="merch.html">Merch</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 Friends of Medicine · All Rights Reserved</div>
+    <div>Miami · Fort Lauderdale (2026) · West Palm Beach (2026) · Dallas (2026) · New York (2026) · Atlanta (2026)</div>
+  </div>
+</footer>
+
+<script>
+
+  // ============ MOBILE HAMBURGER ============
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  function closeMobileMenu() {
+    if (!hamburgerBtn || !mobileMenu) return;
+    hamburgerBtn.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburgerBtn.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+  }
+
+</script>
+
+<!-- BACK TO TOP BUTTON -->
+<style>
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(29, 157, 170, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(29, 157, 170, 0.4);
+  color: #E8E4DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease, border-color 0.2s ease;
+  z-index: 100;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  outline: none;
+  padding: 0;
+  line-height: 1;
+}
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background: rgba(29, 157, 170, 0.3);
+  border-color: rgba(63, 216, 226, 0.8);
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  .back-to-top { bottom: 24px; right: 20px; width: 44px; height: 44px; font-size: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top { transition: opacity 0.2s ease; }
+  .back-to-top:hover { transform: none; }
+}
+</style>
+<button class="back-to-top" id="backToTop" aria-label="Return to top of page" title="Return to top">↑</button>
+<script>
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  function update() { btn.classList.toggle('visible', window.scrollY > 600); }
+  window.addEventListener('scroll', update, { passive: true });
+  btn.addEventListener('click', function() {
+    var supportsSmooth = 'scrollBehavior' in document.documentElement.style;
+    if (supportsSmooth) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  });
+  update();
+})();
+</script>
+</body>
+</html>
